@@ -1,0 +1,15 @@
+@mixin flexbox ($display: flex, $align-items-position: $center, $justify-content-position: $center) {
+    display: $display;
+    align-items: $align-items-position;
+    justify-content: $justify-content-position;
+}
+@mixin font-styles($font-size: 1rem, $font-weight: $regular, $line-height: 2rem) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin text-wrapper($overflow: visible, $white-space: normal, $text-overflow: initial) {
+    overflow-x: $overflow;
+    white-space: $white-space;
+    text-overflow: $text-overflow;
+}

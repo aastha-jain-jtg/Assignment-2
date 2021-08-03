@@ -1,0 +1,11 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+$column: 12;
+@for $i from 1 to $column {
+    .col-#{$i} {
+        flex: percentage($number: ($i/$column));
+        max-width: percentage($number: ($i/$column));
+    }
+}

@@ -6,6 +6,9 @@ import 'images/construction.png';
 import 'images/consultation-bg.png';
 import 'images/exporting.png';
 import 'images/hero-bg.png';
+import 'images/RigNet_Logo.png'
+import 'images/RigNet_Logo@white.png'
+import 'images/site-work.png'
 
 import 'fonts/helvetica-neue.woff';
 import 'fonts/helvetica-neue.woff2';
@@ -21,3 +24,5 @@ import 'fonts/icomoon.eot';
 import 'fonts/icomoon.svg';
 import 'fonts/icomoon.ttf';
 import 'fonts/icomoon.woff';
+
+console.log("check check")

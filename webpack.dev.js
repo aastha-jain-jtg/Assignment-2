@@ -13,4 +13,8 @@ module.exports = merge(common, {
       inject: "body",
     }),
   ],
+  devServer: {
+    inline:true,
+    port: 3000
+  },
 });

@@ -17,15 +17,15 @@ $regular: 300;
 $light: 200;
 $lighter: 100;
 
-// position variables
-$top: top;
-$bottom: bottom;
-$left: left;
-$center: center;
-$right: right;
-
 // breakpoints variables
-$xs-screen: 32rem;
-$md-screen: 76.8rem;
-$lg-screen: 102.5rem;
-$xl-screen: 144rem;
+$xs-screen: 320px;
+$md-screen: 768px;
+$lg-screen: 1025px;
+$xl-screen: 1440px;
+
+// font-family variables
+$font-regular: "helvetica";
+$font-bold: "helvetica-bold";
+$font-black: "helvetica-blk";
+$font-light: "helvetica-light";
+$font-roman: "helvetica-roman";

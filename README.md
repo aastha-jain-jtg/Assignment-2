@@ -7,4 +7,4 @@ To run the Assignment on your system. Perform the following steps:
 - Open the terminal, go inside the cloned directory and run ```npm install```
 - The ```npm install``` you did in previous step should install all the dependencies, which you can confirm by visiting the node_modules in your project directory. 
 - To go live and see the project running , run the command ```npm start```.
-- Once you run the above command your project will get live on localhost:8080.
+- Once you run the above command your project will get live on localhost:3000.

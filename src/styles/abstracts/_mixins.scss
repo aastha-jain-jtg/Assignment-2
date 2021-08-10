@@ -1,0 +1,30 @@
+@mixin flexbox ($display: flex, $align-items-position: $center, $justify-content-position: $center) {
+    display: $display;
+    align-items: $align-items-position;
+    justify-content: $justify-content-position;
+}
+@mixin font-styles($font-size: 1rem, $font-weight: $regular, $line-height: 2rem) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin text-wrapper($overflow: visible, $white-space: normal, $text-overflow: initial) {
+    overflow-x: $overflow;
+    white-space: $white-space;
+    text-overflow: $text-overflow;
+}
+@mixin for-media($size) {
+    @if $size == "phone-screen" {
+        @media (min-width: $xs-screen)
+            { @content; }
+    }@else if $size == "tablet-screen" {
+        @media (min-width: $md-screen) 
+            { @content; }
+    }@else if $size == "laptop-screen" {
+        @media (min-width: $lg-screen) 
+            { @content; }
+    }@else if $size == "desktop-screen" {
+        @media (min-width: $xl-screen) 
+            { @content; }
+    }
+}

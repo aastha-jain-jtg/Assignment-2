@@ -1,0 +1,15 @@
+$font-path: "./../fonts";
+$font-families: (
+  $font-regular: "helvetica-neue",
+  $font-black: "helvetica-neueLTStd-Blk",
+  $font-bold: "helvetica-neueLTStd-Bd",
+  $font-light: "helvetica-neueLTStd-Lt",
+  $font-roman: "helvetica-neueLTStd-roman",
+);
+@each $font, $font-name in $font-families {
+  @font-face {
+    font-family: $font;
+    src: url("#{$font-path}/#{$font-name}.woff"),
+      url("#{$font-path}/#{$font-name}.woff2");
+  }
+}

@@ -1,0 +1,93 @@
+.nav-container {
+    box-shadow: 0 0.4rem 1rem -0.2rem rgba($color: $black, $alpha: 0.2);
+    z-index: $navbar-top-index;
+}
+.navbar {
+    @include flexbox($justify-content: center, $flex-direction: column);
+    &__top {
+        padding: 1.2rem 2rem;
+        @include flexbox($align-items: center, $justify-content: space-between);
+        &--open {
+            @include for-media($tablet) {
+                @include flexbox($justify-content: space-between);
+            }
+        }
+        @include for-media($tablet) {
+            padding: 2rem 0;
+        }
+        @include for-media($laptop) {
+            display: block;
+        }
+    }
+    &__logo {
+        max-width: 9.6rem;
+        @include for-media($tablet) {
+            max-width: 10.8rem;
+        }
+    }
+    &__toggler {
+        @include for-media($laptop) {
+            display: none;
+        }
+    }
+    &__list {
+        @include for-media($laptop) {
+            @include flexbox($align-items: center);
+        }
+    }
+    &__list-item {
+        padding: 2rem 2rem 1.7rem ;
+        border-bottom: 1px solid $light-gray;
+        @include for-media($tablet) {
+            padding:  2rem 0 1.7rem 0;
+        }
+        @include for-media($laptop) {
+            padding: 0;
+            display: inline-block;
+            border-bottom: none;
+            max-width: 24rem;
+            @include text-wrapper(hidden, nowrap, ellipsis);
+            margin-right: 2.48rem;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    &__link {
+        color: $primary-text-color;
+        @include font-styles($font-bold,1.7rem, $bold, 1.9rem);
+        @include for-media($tablet) {
+            display: block;
+            max-width: $tablet-aligner;
+            margin: 0 auto;
+        }
+        @include for-media($laptop) {
+            word-spacing: 1px;
+            @include font-styles($font-bold, 1.4rem, $bold, 1.68rem);
+            color: $gray;
+        }
+    }
+    &__items {
+        height: 0;
+        overflow: hidden;
+        &--open {
+            transition: height 1500ms;
+            position: absolute;
+            width: 100%;
+            top: 6.7rem;
+            left: 0;
+            height: calc(100vh - 6.7rem);
+            background-color: $gray-bg;
+            @include for-media($tablet) {
+                height: calc(100vh - 8.7rem);
+                top: 8.7rem;
+            }
+        }
+        @include for-media($laptop) {
+            height: auto;
+        }
+    }
+    @include for-media($laptop) {
+        @include flexbox($align-items: center, $justify-content: space-between, $flex-direction: row);
+    }
+}

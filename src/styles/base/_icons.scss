@@ -35,9 +35,14 @@ $font-icons: (
   "convert": "\e90b",
   "iiot-network": "\e90c",
   "network": "\e900",
+  "close": "\e90d",
+  "menu": "\e901"
 );
 @each $icon, $icon-content in $font-icons {
   .icon-#{$icon}:before {
     content: $icon-content;
   }
+}
+.navbar__icon {
+  font-size: 3rem;
 }

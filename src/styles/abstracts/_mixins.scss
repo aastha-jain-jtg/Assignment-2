@@ -1,9 +1,11 @@
-@mixin flexbox ($display: flex, $align-items-position: $center, $justify-content-position: $center) {
+@mixin flexbox ($display: flex, $align-items: stretch, $justify-content: flex-start, $flex-direction: row) {
     display: $display;
-    align-items: $align-items-position;
-    justify-content: $justify-content-position;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
 }
-@mixin font-styles($font-size: 1rem, $font-weight: $regular, $line-height: 2rem) {
+@mixin font-styles($font-family: $font-regular, $font-size: 1rem, $font-weight: $regular, $line-height: 2rem) {
+    font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weight;
     line-height: $line-height;

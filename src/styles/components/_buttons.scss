@@ -1,0 +1,13 @@
+.btn{
+    background: transparent;
+    border: transparent;
+    padding: 0;
+}
+.hero__btn {
+    color: $white;
+    font-family: $font-light;
+    @include font-styles(1.4rem, $bolder, 1.4rem);
+    @include for-media(tablet-screen) {
+        @include font-styles(1.6rem, $bolder, 1.9rem);
+    }
+}

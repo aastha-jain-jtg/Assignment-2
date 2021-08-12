@@ -36,7 +36,9 @@ $font-icons: (
   "iiot-network": "\e90c",
   "network": "\e900",
   "close": "\e90d",
-  "menu": "\e901"
+  "menu": "\e901",
+  "arrow": "\e90e",
+  "analysis": "\e90f"
 );
 @each $icon, $icon-content in $font-icons {
   .icon-#{$icon}:before {

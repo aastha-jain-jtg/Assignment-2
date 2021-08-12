@@ -14,3 +14,88 @@
         width: 120.6rem;
     }
 }
+.hero {
+    background-image:linear-gradient(162deg, rgba(3,15,33,1) 0%, rgba(0,0,0,0.1) 100%) ,  url('images/hero-bg.png') ;
+    background-size: cover , cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    color: $white;
+    &__content {
+        margin: 4.5rem 0 4.3rem;
+        @include for-media(tablet-screen) {
+            max-width: 70.8rem;
+            margin: 10.5rem auto;
+        }
+        @include for-media(laptop-screen) {
+            margin: 8.7rem 0 8.8rem;
+        }
+        @include for-media(desktop-screen) {
+            margin: 20rem 0 19.1rem;
+        }
+    }
+    &__heading {
+        font-family: $font-regular;
+        @include font-styles(3.2rem, $bolder, 3.6rem);
+        max-width: 24.6rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+        @include for-media(tablet-screen) {
+            margin-bottom: 1rem;
+            @include font-styles(4.8rem, $bold, 5.2rem);
+        }
+        @include for-media(laptop-screen) {
+            margin-bottom: 1.5rem;
+            @include font-styles(4.8rem, $bold, 5.5rem);
+            letter-spacing: 4px;
+        }
+        @include for-media(desktop-screen) {
+            max-width: 59rem;
+            margin-bottom: 2.5rem;
+            @include font-styles(5.6rem, $bold, 6rem);
+            letter-spacing: 2px;
+            word-spacing: 1px;
+        }
+    }
+    &__desc {
+        max-width: 24rem;
+        font-family: $font-roman;
+        @include font-styles(1.6rem, $bold, 2.1rem);
+        word-spacing: 2px;
+        margin-bottom: 3rem;
+        @include for-media(tablet-screen) {
+            word-spacing: 1px;
+            max-width: 35rem;
+            @include font-styles(1.7rem, $medium, 2.5rem);
+            margin-bottom: 3.5rem;
+        }
+        @include for-media(laptop-screen) { 
+            max-width: 48rem;
+            @include font-styles(2rem, $medium, 2.6rem);
+            margin-bottom: 4rem;
+        }
+        @include for-media(desktop-screen) {
+            max-width: 58rem;
+            word-spacing: 0.5px;
+        }
+    }
+    &__icon{
+        color: $white;
+        font-size: 1.4rem;
+        display: inline-block;
+        margin-left: 0.5rem;
+        @include for-media(tablet-screen) {
+            margin-left: 0.8rem;
+        }
+        @include for-media(laptop-screen) {
+            margin-left: 1rem;
+        }
+    }
+    @include for-media(tablet-screen) {
+       background-position: inherit;
+       background-size: auto;
+    }
+    @include for-media(laptop-screen) {
+        background-position: center;
+        background-size: cover;
+    }
+}

@@ -48,3 +48,37 @@ $font-icons: (
 .navbar__icon {
   font-size: 3rem;
 }
+.hero__icon{
+  color: $white;
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+  @include for-media(tablet-screen) {
+      margin-left: 0.8rem;
+  }
+  @include for-media(laptop-screen) {
+      margin-left: 1rem;
+  }
+}
+.rignet-card__icon {
+  font-size: 4rem;
+  color: $dark-orange;
+  display: inline-block;
+  margin: 0 0 0.8rem;
+  @include for-media(tablet-screen) {
+      margin: 0;
+  }
+  @include for-media(laptop-screen) {
+      font-size: 4.5rem;
+      margin: 0 0 1.5rem;
+  }
+  @include for-media(desktop-screen) {
+      font-size: 5rem;
+      margin: 0 0 1.5rem;
+  }
+}
+.rignet-card__arrow {
+  font-size: 1.3rem;
+  color: $dark-orange;
+  display: inline-block;
+}

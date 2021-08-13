@@ -25,4 +25,17 @@
         }
     }
 }
-
+.rignet-card__btn {
+    @include font-styles(1.3rem, $bolder, 1.56rem);
+    font-family: $font-light;
+    color: $dark-orange;
+    letter-spacing: 0;
+    word-spacing: 0;
+    display: inline-block;
+    @include for-media(laptop-screen) {
+        margin: 0 0 3rem;
+    }
+    @include for-media(desktop-screen) {
+        margin: 0 0 1.5rem;
+    }
+}

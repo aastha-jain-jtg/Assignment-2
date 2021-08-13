@@ -1,4 +1,4 @@
-.main-container {
+.container {
     display: flex;
     flex-direction: column;
 }
@@ -12,5 +12,61 @@
     }
     @include for-media($desktop) {
         width: 120.6rem;
+    }
+}
+.hero {
+    background-image:linear-gradient(162deg, rgba($color: $dark-navy, $alpha: 0.8) 0%, rgba($color: $black, $alpha: 0.1) 100%) ,  url('images/hero-bg.png') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 2rem;
+    &__content {
+        padding: 0;
+        margin: 4.5rem 0 4.2rem;
+        @include for-media($tablet) {
+            margin: 10.5rem auto 9.5rem;
+        }
+        @include for-media($laptop) {
+            margin: 8.7rem 0 8.8rem;
+        }
+        @include for-media($desktop) {
+            margin: 20rem 0 19.1rem;
+        }
+    }
+    &__heading {
+        max-width: 24.6rem;
+        margin-bottom: 1.5rem;
+        @include for-media($tablet) {
+            margin-bottom: 1rem;
+        }
+        @include for-media($laptop) {
+            margin-bottom: 1.5rem;
+        }
+        @include for-media($desktop) {
+            max-width: 59rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__para {
+        max-width: 24rem;
+        margin-bottom: 2.8rem;
+        @include for-media($tablet) {
+            max-width: 35rem;
+            margin-bottom: 3.5rem;
+        }
+        @include for-media($laptop) { 
+            max-width: 48rem;
+        }
+        @include for-media($desktop) {
+            max-width: 58rem;
+        }
+    }
+    @include for-media($tablet) {
+       background-position: inherit;
+       background-size: auto;
+    }
+    @include for-media($laptop) {
+        background-position: center;
+        background-size: cover;
     }
 }

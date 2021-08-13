@@ -15,86 +15,93 @@
     }
 }
 .hero {
-    background-image:linear-gradient(162deg, rgba(3,15,33,1) 0%, rgba(0,0,0,0.1) 100%) ,  url('images/hero-bg.png') ;
-    background-size: cover , cover;
-    background-position: center, center;
-    background-repeat: no-repeat, no-repeat;
+    background-image:linear-gradient(162deg, rgba($color: $dark-navy, $alpha: 0.8) 0%, rgba($color: $black, $alpha: 0.1) 100%) ,  url('images/hero-bg.png') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: $white;
+    padding: 0 2rem;
     &__content {
-        margin: 4.5rem 0 4.3rem;
-        @include for-media(tablet-screen) {
-            max-width: 70.8rem;
-            margin: 10.5rem auto;
+        padding: 0;
+        margin: 4.5rem 0 4.2rem;
+        @include for-media($tablet) {
+            margin: 10.5rem auto 15.5rem;
         }
-        @include for-media(laptop-screen) {
+        @include for-media($laptop) {
             margin: 8.7rem 0 8.8rem;
         }
-        @include for-media(desktop-screen) {
+        @include for-media($desktop) {
             margin: 20rem 0 19.1rem;
         }
     }
     &__heading {
-        font-family: $font-regular;
-        @include font-styles(3.2rem, $bolder, 3.6rem);
+        @include font-styles($font-size: 3.2rem, $font-weight: $bolder, $line-height: 3.6rem);
         max-width: 24.6rem;
         letter-spacing: 1px;
         margin-bottom: 1.5rem;
-        @include for-media(tablet-screen) {
+        @include for-media($tablet) {
             margin-bottom: 1rem;
-            @include font-styles(4.8rem, $bold, 5.2rem);
+            @include font-styles($font-size: 4.8rem, $font-weight: $bold, $line-height: 5.2rem);
         }
-        @include for-media(laptop-screen) {
+        @include for-media($laptop) {
             margin-bottom: 1.5rem;
-            @include font-styles(4.8rem, $bold, 5.5rem);
+            @include font-styles($font-size: 4.8rem,$font-weight: $bold, $line-height: 5.5rem);
             letter-spacing: 4px;
         }
-        @include for-media(desktop-screen) {
+        @include for-media($desktop) {
             max-width: 59rem;
             margin-bottom: 2.5rem;
-            @include font-styles(5.6rem, $bold, 6rem);
+            @include font-styles($font-size: 5.6rem,$font-weight: $bold, $line-height: 6rem);
             letter-spacing: 2px;
             word-spacing: 1px;
         }
     }
     &__desc {
         max-width: 24rem;
-        font-family: $font-roman;
-        @include font-styles(1.6rem, $bold, 2.1rem);
+        @include font-styles($font-roman, 1.6rem, $medium, 2.1rem);
         word-spacing: 2px;
-        margin-bottom: 3rem;
-        @include for-media(tablet-screen) {
+        margin-bottom: 2.8rem;
+        @include for-media($tablet) {
             word-spacing: 1px;
             max-width: 35rem;
-            @include font-styles(1.7rem, $medium, 2.5rem);
+            @include font-styles($font-roman, 1.7rem, $medium, 2.5rem);
             margin-bottom: 3.5rem;
         }
-        @include for-media(laptop-screen) { 
+        @include for-media($laptop) { 
             max-width: 48rem;
-            @include font-styles(2rem, $medium, 2.6rem);
-            margin-bottom: 4rem;
+            @include font-styles($font-roman, 2rem, $medium, 2.6rem);
         }
-        @include for-media(desktop-screen) {
+        @include for-media($desktop) {
             max-width: 58rem;
             word-spacing: 0.5px;
+        }
+    }
+    &__btn {
+        color: $white;
+        letter-spacing: 3px;
+        @include font-styles($font-bold, 1.4rem, $bolder, 1.68rem);
+        @include for-media($tablet) {
+            @include font-styles($font-bold, 1.6rem, $bolder, 1.9rem);
         }
     }
     &__icon{
         color: $white;
         font-size: 1.4rem;
+        $font-weight: $bolder;
         display: inline-block;
-        margin-left: 0.5rem;
-        @include for-media(tablet-screen) {
-            margin-left: 0.8rem;
+        margin-left: 0.3rem;
+        @include for-media($tablet) {
+            margin-left: 1.8rem;
         }
-        @include for-media(laptop-screen) {
-            margin-left: 1rem;
+        @include for-media($laptop) {
+            margin-left: 2.5rem;
         }
     }
-    @include for-media(tablet-screen) {
+    @include for-media($tablet) {
        background-position: inherit;
        background-size: auto;
     }
-    @include for-media(laptop-screen) {
+    @include for-media($laptop) {
         background-position: center;
         background-size: cover;
     }

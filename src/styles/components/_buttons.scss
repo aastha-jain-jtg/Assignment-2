@@ -1,7 +1,28 @@
-.btn{
-    background: transparent;
-    border: transparent;
+.btn {
     padding: 0;
     transform: scaleX(0.7);
     transform-origin: top left;
+    letter-spacing: 3px;
+    @include font-styles($font-bold, 1.4rem, $bolder, 1.68rem);
+    @include for-media($tablet) {
+        @include font-styles($font-bold, 1.6rem, $bolder, 1.9rem);
+    }
+    &__icon {
+        display: inline-block;
+        font-weight: $bolder;
+        margin-left: 0.3rem;
+        @include for-media($tablet) {
+            margin-left: 1.8rem;
+        }
+        @include for-media($laptop) {
+            margin-left: 2.5rem;
+        }
+    }
+    &--small {
+        @include font-styles($font-bold, 1.3rem, $bolder, 1.56rem);
+        @include for-media($tablet) {
+            @include font-styles($font-bold, 1.4rem, $bolder, 1.68rem);
+        }
+    }
 }
+

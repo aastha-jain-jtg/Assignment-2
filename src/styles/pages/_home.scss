@@ -24,7 +24,7 @@
         padding: 0;
         margin: 4.5rem 0 4.2rem;
         @include for-media($tablet) {
-            margin: 10.5rem auto 15.5rem;
+            margin: 10.5rem auto 9.5rem;
         }
         @include for-media($laptop) {
             margin: 8.7rem 0 8.8rem;
@@ -35,28 +35,22 @@
     }
     &__heading {
         max-width: 24.6rem;
-        letter-spacing: 1px;
         margin-bottom: 1.5rem;
         @include for-media($tablet) {
             margin-bottom: 1rem;
         }
         @include for-media($laptop) {
             margin-bottom: 1.5rem;
-            letter-spacing: 4px;
         }
         @include for-media($desktop) {
             max-width: 59rem;
             margin-bottom: 2.5rem;
-            letter-spacing: 2px;
-            word-spacing: 1px;
         }
     }
     &__para {
         max-width: 24rem;
-        word-spacing: 2px;
         margin-bottom: 2.8rem;
         @include for-media($tablet) {
-            word-spacing: 1px;
             max-width: 35rem;
             margin-bottom: 3.5rem;
         }
@@ -65,11 +59,7 @@
         }
         @include for-media($desktop) {
             max-width: 58rem;
-            word-spacing: 0.5px;
         }
-    }
-    &__icon{
-        font-size: 1.5rem;
     }
     @include for-media($tablet) {
        background-position: inherit;

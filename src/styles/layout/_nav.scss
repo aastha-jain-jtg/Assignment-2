@@ -74,13 +74,13 @@
             transition: height 1500ms;
             position: absolute;
             width: 100%;
-            top: 6.7rem;
+            top: 5.955rem;
             left: 0;
-            height: calc(100vh - 6.7rem);
+            height: calc(100vh - 5.955rem);
             background-color: $gray-bg;
             @include for-media($tablet) {
-                height: calc(100vh - 8.7rem);
-                top: 8.7rem;
+                height: calc(100vh - 8rem);
+                top: 8rem;
             }
         }
         @include for-media($laptop) {

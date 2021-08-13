@@ -13,3 +13,47 @@ $font-families: (
       url("#{$font-path}/#{$font-name}.woff2");
   }
 }
+$text-colors: (
+  "black": $black,
+  "white": $white,
+  "primary": $primary-text-color,
+  "gray": $gray,
+  "light-gray": $light-gray,
+  "light-orange": $light-orange,
+  "dark-orange": $dark-orange,
+  "dark-navy": $dark-navy,
+  "light-navy": $light-navy,
+);
+@each $color, $text-color in $text-colors {
+  .text-#{$color} {
+    color: $text-color;
+  }
+}
+.heading-1 {
+  @include font-styles($font-size: 3.2rem, $font-weight: $bolder, $line-height: 3.6rem);
+  letter-spacing: 1px;
+  @include for-media($tablet) {
+    @include font-styles($font-size: 4.8rem, $font-weight: $bold, $line-height: 5.2rem);
+  }
+  @include for-media($laptop) {
+      @include font-styles($font-size: 4.8rem,$font-weight: $bold, $line-height: 5.5rem);
+      letter-spacing: 4px;
+  }
+  @include for-media($desktop) {
+      @include font-styles($font-size: 5.6rem,$font-weight: $bold, $line-height: 6rem);
+      letter-spacing: 2px;
+      word-spacing: 1px;
+  }
+}
+.para-1 {
+  @include font-styles($font-roman, 1.6rem, $medium, 2.1rem);
+  word-spacing: 2px;
+  @include for-media($tablet) {
+      @include font-styles($font-roman, 1.7rem, $medium, 2.5rem);
+      word-spacing: 1px;
+  }
+  @include for-media($laptop) { 
+      @include font-styles($font-roman, 2rem, $medium, 2.6rem);
+      word-spacing: 0.5px;
+  }
+}

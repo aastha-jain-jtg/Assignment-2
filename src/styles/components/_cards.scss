@@ -1,97 +1,129 @@
+.card {
+  &__icon {
+    font-size: 4rem;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    @include for-media($tablet) {
+      margin-bottom: 0.4rem;
+    }
+    @include for-media($laptop) {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+    }
+    @include for-media($desktop) {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__title {
+    @include font-styles(
+      $font-size: 1.5rem,
+      $font-weight: $bold,
+      $line-height: 1.9rem
+    );
+    word-spacing: 0;
+    letter-spacing: 0.2px;
+    @include for-media($tablet) {
+      @include font-styles(
+        $font-size: 1.6rem,
+        $font-weight: $bold,
+        $line-height: 1.8rem
+      );
+    }
+    @include for-media($desktop) {
+      @include font-styles(
+        $font-size: 2rem,
+        $font-weight: $bold,
+        $line-height: 2.4rem
+      );
+    }
+  }
+  &__para {
+    @include font-styles($font-roman, 1.3rem, $medium, 1.8rem);
+    word-spacing: 1px;
+    letter-spacing: 0.2px;
+    @include for-media($tablet) {
+      @include font-styles($font-roman, 1.2rem, $medium, 1.9rem);
+      word-spacing: 0;
+      letter-spacing: 0;
+    }
+  }
+}
+.row {
+  &:last-child {
+    padding-bottom: 22rem;
+    @include for-media($tablet) {
+      padding-bottom: 33.5rem;
+    }
+    @include for-media($laptop) {
+      padding-bottom: 32.5rem;
+    }
+    @include for-media($desktop) {
+      padding-bottom: 36.5rem;
+    }
+  }
+  @include for-media($tablet) {
+    margin-bottom: 1rem;
+  }
+  @include for-media($laptop) {
+    margin-bottom: 0.5rem;
+  }
+}
 .rignet-card {
-    background-color: $white;
-    padding: 1.5rem 1.5rem 2.3rem;
-    margin: 0 0 1.5rem;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
-    &:last-child {
-        margin: 0 0 23rem;
-        @include for-media(tablet-screen) {
-            margin: 0 0 33.5rem;
-        }
-        @include for-media(laptop-screen) {
-            margin: 0 0 32.5rem 0.5rem;
-        }
-        @include for-media(desktop-screen) {
-            margin: 0 0 37rem 1rem;
-        }
+  background-color: $white;
+  padding: 1.5rem 1.5rem 2.3rem;
+  margin: 0 2rem 1.5rem;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+  &__title {
+    max-width: 16rem;
+    margin-bottom: 1rem;
+    @include for-media($tablet) {
+      max-width: 17rem;
+      margin-bottom: 1.2rem;
     }
-    &__title {
-        font-family: $font-regular;
-        @include font-styles(1.5rem, $bold, 1.9rem);
-        word-spacing: 0;
-        letter-spacing: 0.2px;
-        margin: 0 0 1rem;
-        @include for-media(tablet-screen) {
-            @include font-styles(1.6rem, $bold, 1.8rem);
-            margin: 0 0 1.5rem;
-        }
-        @include for-media(desktop-screen) {
-            @include font-styles(2rem, $bold, 2.4rem);
-            margin: 0 0 1rem;
-        }
+    @include for-media($laptop) {
+      max-width: 19rem;
+      margin-bottom: 1.2rem;
     }
-    &__desc {
-        font-family: $font-roman;
-        @include font-styles(1.3rem, $medium, 1.8rem);
-        word-spacing: 1px;
-        letter-spacing: 0.2px;
-        margin: 0 0 1.6rem;
-        min-height: 12.9rem;
-        @include for-media(tablet-screen) {
-            @include font-styles(1.4rem, $medium, 1.9rem);
-            margin: 0 0 1.2rem;
-            min-height: 13rem;
-            word-spacing: 0;
-            letter-spacing: 0
-        }
-        @include for-media(desktop-screen) {
-            min-height: 10.5rem;
-        }
+    @include for-media($desktop) {
+      max-width: 21rem;
+      margin-bottom: 1rem;
     }
-    &__assets {
-        max-width: 10.5rem;
-        @include for-media(tablet-screen) {
-            max-width: 11rem;
-        }
-        @include for-media(desktop-screen) {
-            max-width: 15rem;
-            letter-spacing: 1px;
-        }
+  }
+  &__para {
+    margin-bottom: 1.6rem;
+    min-height: 12.9rem;
+    @include for-media($tablet) {
+      margin-bottom: 1.2rem;
+      min-height: 13rem;
     }
-    &__iiot {
-        max-width: 10rem;
-        @include for-media(desktop-screen) {
-            max-width: 13rem;
-            letter-spacing: 1px;
-        }
+    @include for-media($desktop) {
+      min-height: 10.5rem;
     }
-    &__analytics {
-        max-width: 15.3rem;
-        word-spacing: 0.25px;
-        @include for-media(tablet-screen) {
-            max-width: 16.33rem;
-            word-spacing: 0.6px;
-        }
-        @include for-media(desktop-screen) {
-            max-width: 20.3rem;
-            word-spacing: 0.6px;
-        }
+  }
+  &:nth-child(odd) {
+    @include for-media($tablet) {
+      margin-right: 0.4rem;
     }
-    @include for-media(tablet-screen) {
-        max-width: 34.8rem;
-        margin: 0 0 1.5rem;
-        display: inline-block;
-        box-sizing: border-box;
-        padding: 2.5rem 2.5rem 2.6rem;
+    @include for-media($desktop) {
+      margin-right: 1.4rem;
     }
-    @include for-media(laptop-screen) {
-        max-width: 46.5rem;
-        margin: 1rem 0 0.6rem;
-        padding: 3.5rem 3.5rem 2.6rem;
-    }
-    @include for-media(desktop-screen) {
-        max-width: 59.3rem;
-        padding: 6rem 4rem 2.6rem;
-        margin: 1rem 0 0.6rem;;
-    }
+  }
+  @include for-media($tablet) {
+    margin: 0 0 0 0.2rem;
+    max-width: 34.8rem;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 2.5rem 2.5rem 2.6rem;
+  }
+  @include for-media($laptop) {
+    max-width: 46.4rem;
+    margin: 1rem 0 0 0.4rem;
+    padding: 3.5rem 3.5rem 5.8rem;
+  }
+  @include for-media($desktop) {
+    max-width: 59.3rem;
+    padding: 6rem 4rem 3.2rem;
+    margin: 1.8rem 0 0.6rem;
+  }
 }

@@ -93,6 +93,29 @@ $text-colors: (
     );
   }
 }
+.heading-3 {
+  @include font-styles(
+    $font-size: 1.5rem,
+    $font-weight: $bold,
+    $line-height: 1.9rem
+  );
+  word-spacing: 0;
+  letter-spacing: 0.2px;
+  @include for-media($tablet) {
+    @include font-styles(
+      $font-size: 1.6rem,
+      $font-weight: $bold,
+      $line-height: 1.8rem
+    );
+  }
+  @include for-media($desktop) {
+    @include font-styles(
+      $font-size: 2rem,
+      $font-weight: $bold,
+      $line-height: 2.4rem
+    );
+  }
+}
 .para-1 {
   @include font-styles($font-roman, 1.6rem, $medium, 2.1rem);
   word-spacing: 2px;
@@ -113,7 +136,17 @@ $text-colors: (
     @include font-styles($font-roman, 1.7rem, $medium, 2.3rem);
   }
 }
-.subscript {
+.para-3 {
+  @include font-styles($font-roman, 1.3rem, $medium, 1.8rem);
+  word-spacing: 1px;
+  letter-spacing: 0.2px;
+  @include for-media($tablet) {
+    @include font-styles($font-roman, 1.2rem, $medium, 1.9rem);
+    word-spacing: 0;
+    letter-spacing: 0;
+  }
+}
+.superscript {
   transform: scaleX(0.7);
   transform-origin: top left;
   letter-spacing: 3px;

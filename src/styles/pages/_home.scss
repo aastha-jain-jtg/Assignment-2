@@ -81,6 +81,18 @@
   background-size: 100% 72%, 100% 28%;
   background-repeat: no-repeat;
   background-position: top, bottom;
+  &__content {
+      padding-bottom: 22rem;
+      @include for-media($tablet) {
+        padding-bottom: 32.5rem;
+      }
+      @include for-media($laptop) {
+        padding-bottom: 32rem;
+      }
+      @include for-media($desktop) {
+        padding-bottom: 36rem;
+      }
+  }
   &__title {
     box-sizing: border-box;
     padding: 4.5rem 2rem 2.5rem;
@@ -96,7 +108,7 @@
       padding: 6.5rem 0 0 3.5rem;
     }
   }
-  &__subscript {
+  &__superscript {
     margin: 0 0 0.5rem;
     @include for-media($laptop) {
       margin-bottom: 0;

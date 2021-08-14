@@ -15,53 +15,8 @@
       margin-bottom: 1rem;
     }
   }
-  &__title {
-    @include font-styles(
-      $font-size: 1.5rem,
-      $font-weight: $bold,
-      $line-height: 1.9rem
-    );
-    word-spacing: 0;
-    letter-spacing: 0.2px;
-    @include for-media($tablet) {
-      @include font-styles(
-        $font-size: 1.6rem,
-        $font-weight: $bold,
-        $line-height: 1.8rem
-      );
-    }
-    @include for-media($desktop) {
-      @include font-styles(
-        $font-size: 2rem,
-        $font-weight: $bold,
-        $line-height: 2.4rem
-      );
-    }
-  }
-  &__para {
-    @include font-styles($font-roman, 1.3rem, $medium, 1.8rem);
-    word-spacing: 1px;
-    letter-spacing: 0.2px;
-    @include for-media($tablet) {
-      @include font-styles($font-roman, 1.2rem, $medium, 1.9rem);
-      word-spacing: 0;
-      letter-spacing: 0;
-    }
-  }
 }
 .row {
-  &:last-child {
-    padding-bottom: 22rem;
-    @include for-media($tablet) {
-      padding-bottom: 33.5rem;
-    }
-    @include for-media($laptop) {
-      padding-bottom: 32.5rem;
-    }
-    @include for-media($desktop) {
-      padding-bottom: 36.5rem;
-    }
-  }
   @include for-media($tablet) {
     margin-bottom: 1rem;
   }

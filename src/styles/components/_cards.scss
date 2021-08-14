@@ -16,14 +16,6 @@
     }
   }
 }
-.row {
-  @include for-media($tablet) {
-    margin-bottom: 1rem;
-  }
-  @include for-media($laptop) {
-    margin-bottom: 0.5rem;
-  }
-}
 .rignet-card {
   background-color: $white;
   padding: 1.5rem 1.5rem 2.3rem;
@@ -37,7 +29,7 @@
       margin-bottom: 1.2rem;
     }
     @include for-media($laptop) {
-      max-width: 19rem;
+      max-width: 18.5rem;
       margin-bottom: 1.2rem;
     }
     @include for-media($desktop) {
@@ -80,5 +72,52 @@
     max-width: 59.3rem;
     padding: 6rem 4rem 3.2rem;
     margin: 1.8rem 0 0.6rem;
+  }
+}
+.growth-card {
+  margin-bottom: 3rem;
+  &:first-child {
+    @include for-media($tablet) {
+      min-height: 20.7rem;
+    }
+  }
+  &__icon {
+    font-size: 3.5rem;
+    margin-bottom: 0.9rem;
+    @include for-media($laptop) {
+      margin-bottom: 1rem;
+    }
+    @include for-media($desktop) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__title {
+    max-width: 15rem;
+    margin-bottom: 1rem;
+    @include for-media($tablet) {
+      max-width: 16.5rem;
+    }
+    @include for-media($desktop) {
+      max-width: 19rem;
+    }
+  }
+  &__desc {
+    @include for-media($tablet) {
+      max-width: 20.5rem;
+    }
+    @include for-media($laptop) {
+      min-height: 8rem;
+      max-width: 27.5rem;
+    }
+    @include for-media($desktop) {
+      min-height: 7rem;
+      min-width: 35rem;
+    }
+  }
+  @include for-media($laptop) {
+    margin-bottom: 1.2rem;
+  }
+  @include for-media($desktop) {
+    margin-bottom: 2rem;
   }
 }

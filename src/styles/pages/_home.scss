@@ -182,12 +182,12 @@
     }
   }
   &__header {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     @include for-media($laptop) {
-      margin: 6.5rem 0 2.5rem;
+      margin-top: 6.5rem;
     }
     @include for-media($desktop) {
-      margin: 7.5rem 0 2.5rem;
+      margin-top: 7.5rem;
       flex: 30%;
       min-width: 30%;
     }
@@ -211,7 +211,7 @@
     margin-bottom: 2.5rem;
     @include for-media($tablet) {
       margin-bottom: 3rem;
-      max-width: 81%;
+      max-width: 90%;
     }
     @include for-media($laptop) {
       margin-bottom: 4rem;
@@ -259,6 +259,7 @@
       margin-bottom: 3rem;
     }
     @include for-media($desktop) {
+      margin-bottom: 3.8rem;
       max-width: 37rem;
     }
   }

@@ -1,72 +1,154 @@
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .aligner {
-    @include for-media($tablet) {
-        margin: 0 auto;
-        width: 70.8rem;
-    }
-    @include for-media($laptop) {
-        width: 94.3rem;
-    }
-    @include for-media($desktop) {
-        width: 120.6rem;
-    }
+  @include for-media($tablet) {
+    margin: 0 auto;
+    width: 70.8rem;
+  }
+  @include for-media($laptop) {
+    width: 94.3rem;
+  }
+  @include for-media($desktop) {
+    width: 120.6rem;
+  }
 }
 .hero {
-    background-image:linear-gradient(162deg, rgba($color: $dark-navy, $alpha: 0.8) 0%, rgba($color: $black, $alpha: 0.1) 100%) ,  url('images/hero-bg.png') ;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0 2rem;
-    &__content {
-        padding: 0;
-        margin: 4.5rem 0 4.2rem;
-        @include for-media($tablet) {
-            margin: 10.5rem auto 9.5rem;
-        }
-        @include for-media($laptop) {
-            margin: 8.7rem 0 8.8rem;
-        }
-        @include for-media($desktop) {
-            margin: 20rem 0 19.1rem;
-        }
-    }
-    &__heading {
-        max-width: 24.6rem;
-        margin-bottom: 1.5rem;
-        @include for-media($tablet) {
-            margin-bottom: 1rem;
-        }
-        @include for-media($laptop) {
-            margin-bottom: 1.5rem;
-        }
-        @include for-media($desktop) {
-            max-width: 59rem;
-            margin-bottom: 2.5rem;
-        }
-    }
-    &__para {
-        max-width: 24rem;
-        margin-bottom: 2.8rem;
-        @include for-media($tablet) {
-            max-width: 35rem;
-            margin-bottom: 3.5rem;
-        }
-        @include for-media($laptop) { 
-            max-width: 48rem;
-        }
-        @include for-media($desktop) {
-            max-width: 58rem;
-        }
-    }
+  background-image: linear-gradient(
+      162deg,
+      rgba($color: $dark-navy, $alpha: 0.8) 0,
+      rgba($color: $black, $alpha: 0.1) 100%
+    ),
+    url("images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 2rem;
+  &__content {
+    padding: 0;
+    margin: 4.5rem 0 4.2rem;
     @include for-media($tablet) {
-       background-position: inherit;
-       background-size: auto;
+      margin: 10.5rem auto 9.5rem;
     }
     @include for-media($laptop) {
-        background-position: center;
-        background-size: cover;
+      margin: 8.7rem 0 8.8rem;
     }
+    @include for-media($desktop) {
+      margin: 20rem 0 19.1rem;
+    }
+  }
+  &__heading {
+    max-width: 24.6rem;
+    margin-bottom: 1.5rem;
+    @include for-media($tablet) {
+      margin-bottom: 1rem;
+    }
+    @include for-media($laptop) {
+      margin-bottom: 1.5rem;
+    }
+    @include for-media($desktop) {
+      max-width: 59rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__para {
+    max-width: 24rem;
+    margin-bottom: 2.8rem;
+    @include for-media($tablet) {
+      max-width: 35rem;
+      margin-bottom: 3.5rem;
+    }
+    @include for-media($laptop) {
+      max-width: 48rem;
+    }
+    @include for-media($desktop) {
+      max-width: 58rem;
+    }
+  }
+  @include for-media($tablet) {
+    background-position: inherit;
+    background-size: auto;
+  }
+  @include for-media($laptop) {
+    background-position: center;
+    background-size: cover;
+  }
+}
+.rignet {
+  background: linear-gradient(90deg, $light-orange 0, $dark-orange 100%),
+    url("images/construction.png");
+  background-size: 100% 72%, 100% 28%;
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  &__content {
+      padding-bottom: 22rem;
+      @include for-media($tablet) {
+        padding-bottom: 32.5rem;
+      }
+      @include for-media($laptop) {
+        padding-bottom: 32rem;
+      }
+      @include for-media($desktop) {
+        padding-bottom: 36rem;
+      }
+  }
+  &__title {
+    box-sizing: border-box;
+    padding: 4.5rem 2rem 2.5rem;
+    @include for-media($tablet) {
+      padding: 2.5rem 0 0 2.8rem;
+    }
+    @include for-media($laptop) {
+      padding: 4.5rem 0 0 3rem;
+    }
+    @include for-media($desktop) {
+      max-width: 50rem;
+      margin-right: 11rem;
+      padding: 6.5rem 0 0 3.5rem;
+    }
+  }
+  &__superscript {
+    margin: 0 0 0.5rem;
+    @include for-media($laptop) {
+      margin-bottom: 0;
+    }
+  }
+  &__heading {
+    max-width: 26rem;
+    margin: 0 0 1rem;
+    @include for-media($tablet) {
+      max-width: 22rem;
+    }
+    @include for-media($laptop) {
+      margin: 0 0 0.5rem;
+      max-width: 28rem;
+    }
+    @include for-media($desktop) {
+      margin-bottom: 1.5rem;
+      max-width: 35rem;
+    }
+  }
+  &__icon {
+    display: none;
+    @include for-media($desktop) {
+      display: block;
+      margin: 0 2rem 3rem 1.5rem;
+      height: 4rem;
+      width: 0.5rem;
+      border: 1px solid $white;
+      float: left;
+      transform: rotate(20deg);
+    }
+  }
+  @include for-media($tablet) {
+    padding: 5rem 0 0;
+    background-size: 100% 50%, 100% 50%;
+  }
+  @include for-media($laptop) {
+    background-size: 100% 55%, 100% 45%;
+  }
+  @include for-media($desktop) {
+    background-size: 100% 50%, 100% 50%;
+  }
 }

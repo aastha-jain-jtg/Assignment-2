@@ -4,8 +4,16 @@
 }
 $column: 12;
 @for $i from 1 to $column {
-    .col-#{$i} {
-        flex: percentage($number: ($i/$column));
-        max-width: percentage($number: ($i/$column));
+    .col-lg-#{$i} {
+        @include for-media($tablet) {
+            flex: percentage($number: ($i/$column));
+            max-width: percentage($number: ($i/$column));
+        }
+    }
+    .col-sm-#{$i} {
+        @include for-media($phone) {
+            flex: percentage($number: ($i/$column));
+            max-width: percentage($number: ($i/$column));
+        }
     }
 }

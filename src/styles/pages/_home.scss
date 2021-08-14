@@ -152,13 +152,3 @@
     background-size: 100% 50%, 100% 50%;
   }
 }
-.rignet-section {
-  max-width: 70.8rem;
-  margin: 0 auto;
-  @include for-media($laptop) {
-    max-width: 94.3rem;
-  }
-  @include for-media($desktop) {
-    max-width: 120.6rem;
-  }
-}

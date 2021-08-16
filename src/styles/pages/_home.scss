@@ -375,3 +375,49 @@
     }
   }
 }
+.consultation {
+  background-image: url("images/consultation-bg.png");
+  background-position: center;
+  background-size: cover;
+  &__content {
+    padding: 4.3rem 0 4.3rem 2rem; 
+    @include for-media($tablet) {
+      padding:4.5rem 0;
+    }
+    @include for-media($laptop) {
+      padding: 5.5rem 0;
+    }
+    @include for-media($desktop) {
+      padding: 6rem 0;
+    }
+  }
+  &__heading {
+    max-width: 17.5rem;
+    margin-bottom: 0.8rem;
+    @include for-media($tablet) {
+      margin-bottom: 1rem;
+      max-width: 20rem;
+    }
+    @include for-media($laptop) {
+      margin-bottom: 1.8rem;
+      max-width: 25rem;
+    }
+    @include for-media($desktop) {
+      margin-bottom: 2rem;
+      max-width: 35rem;
+    }
+  }
+  &__para {
+    margin-bottom: 2rem;
+    @include for-media($tablet) {
+      max-width: 35rem;
+    }
+    @include for-media($laptop) {
+      max-width: 40rem;
+      margin-bottom: 4rem;
+    }
+    @include for-media($desktop) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

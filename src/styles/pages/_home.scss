@@ -82,20 +82,40 @@
   background-repeat: no-repeat;
   background-position: top, bottom;
   &__content {
-      padding-bottom: 22rem;
-      @include for-media($tablet) {
-        padding-bottom: 32.5rem;
-      }
-      @include for-media($laptop) {
-        padding-bottom: 32rem;
+    padding-bottom: 21.9rem;
+    @include for-media($tablet) {
+      padding-bottom: 32rem;
+    }
+    @include for-media($desktop) {
+      padding-bottom: 37rem;
+    }
+  }
+  &__row {
+    @include for-media($tablet) {
+      margin-bottom: 1.2rem;
+    }
+    @include for-media($laptop) {
+      margin-bottom: 0.6rem;
+    }
+    @include for-media($desktop) {
+      margin-bottom: 0;
+    }
+  }
+  &__column {
+    &:last-child {
+      box-sizing: border-box;
+      @include for-media($tablet){
+      padding-left: 0.6rem;
       }
       @include for-media($desktop) {
-        padding-bottom: 36rem;
+        padding-left: 1rem;
       }
+    }
   }
   &__title {
     box-sizing: border-box;
     padding: 4.5rem 2rem 2.5rem;
+    margin-right: 0.75rem;
     @include for-media($tablet) {
       padding: 2.5rem 0 0 2.8rem;
     }
@@ -150,5 +170,112 @@
   }
   @include for-media($desktop) {
     background-size: 100% 50%, 100% 50%;
+  }
+}
+.growth {
+  background: linear-gradient(
+    90deg,
+    rgba(3, 15, 33, 1) 0%,
+    rgba(64, 70, 92, 1) 100%
+  );
+  &__content {
+    padding: 4.2rem 2rem 0;
+    @include for-media($tablet) {
+      margin: 0 auto;
+      padding: 5rem 0 0.3rem;
+    }
+    @include for-media($laptop) {
+      padding: 0 0 1rem 0;
+    }
+    @include for-media($desktop) {
+      padding-bottom: 0;
+    }
+  }
+  &__row {
+    @include for-media($laptop) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__header {
+    margin-bottom: 2.5rem;
+    @include for-media($laptop) {
+      margin-top: 6.5rem;
+    }
+    @include for-media($desktop) {
+      margin-top: 7.5rem;
+      flex: 30%;
+      min-width: 30%;
+    }
+  }
+  &__title {
+    max-width: 24rem;
+    margin-bottom: 1rem;
+    @include for-media($tablet) {
+      margin-bottom: 1.5rem;
+    }
+    @include for-media($laptop) {
+      max-width: 28rem;
+      margin-bottom: 2.5rem;
+    }
+    @include for-media($desktop) {
+      max-width: 35rem;
+      margin-bottom: 3rem;
+    }
+  }
+  &__para {
+    margin-bottom: 2.5rem;
+    @include for-media($tablet) {
+      margin-bottom: 3rem;
+      max-width: 90%;
+    }
+    @include for-media($laptop) {
+      margin-bottom: 4rem;
+    }
+    @include for-media($desktop) {
+      margin-left: 4rem;
+    }
+  }
+  &__btn {
+    @include for-media($desktop) {
+      margin-left: 4rem;
+    }
+  }
+  &__cards {
+    margin-bottom: 4rem;
+    @include for-media($tablet) {
+      display: flex;
+      margin-bottom: 0;
+    }
+    @include for-media($laptop) {
+      margin-top: 6rem;
+    }
+    @include for-media($desktop) {
+      margin: 8rem 0 0 0.5rem;
+    }
+  }
+  &__column {
+    &:last-child {
+      @include for-media($tablet) {
+        margin-left: 4rem;
+      }
+      @include for-media($laptop) {
+        margin-left: 5.5rem;
+      }
+      @include for-media($desktop) {
+        margin-left: 7rem;
+      }
+    }
+    @include for-media($tablet) {
+      margin-left: 1rem;
+      max-width: 21rem;
+    }
+    @include for-media($laptop) {
+      max-width: 28rem;
+      margin-bottom: 3rem;
+    }
+    @include for-media($desktop) {
+      margin-bottom: 3.8rem;
+      max-width: 37rem;
+    }
   }
 }

@@ -141,7 +141,7 @@ $text-colors: (
   word-spacing: 1px;
   letter-spacing: 0.2px;
   @include for-media($tablet) {
-    @include font-styles($font-roman, 1.2rem, $medium, 1.9rem);
+    @include font-styles($font-roman, 1.4rem, $medium, 1.9rem);
     word-spacing: 0;
     letter-spacing: 0;
   }

@@ -84,23 +84,36 @@
   &__content {
     padding-bottom: 21.9rem;
     @include for-media($tablet) {
-      padding-bottom: 32.5rem;
+      padding-bottom: 32rem;
     }
     @include for-media($desktop) {
-      padding-bottom: 36rem;
+      padding-bottom: 37rem;
     }
   }
   &__row {
     @include for-media($tablet) {
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
     @include for-media($laptop) {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    @include for-media($desktop) {
+      margin-bottom: 0;
+    }
+  }
+  &__column {
+    &:last-child {
+      box-sizing: border-box;
+      padding-left: 0.6rem;
+      @include for-media($desktop) {
+        padding-left: 1rem;
+      }
     }
   }
   &__title {
     box-sizing: border-box;
     padding: 4.5rem 2rem 2.5rem;
+    margin-right: 0.75rem;
     @include for-media($tablet) {
       padding: 2.5rem 0 0 2.8rem;
     }

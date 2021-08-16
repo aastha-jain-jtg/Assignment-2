@@ -104,7 +104,9 @@
   &__column {
     &:last-child {
       box-sizing: border-box;
+      @include for-media($tablet){
       padding-left: 0.6rem;
+      }
       @include for-media($desktop) {
         padding-left: 1rem;
       }

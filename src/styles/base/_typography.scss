@@ -146,6 +146,16 @@ $text-colors: (
     letter-spacing: 0;
   }
 }
+.para-4 {
+  @include font-styles($font-roman, 1.3rem, $bold, 1.8rem);
+  word-spacing: 1px;
+  letter-spacing: 0.2px;
+  @include for-media($tablet) {
+    @include font-styles($font-roman, 1.2rem, $bold, 1.9rem);
+    word-spacing: 0;
+    letter-spacing: 0;
+  }
+}
 .superscript {
   transform: scaleX(0.7);
   transform-origin: top left;

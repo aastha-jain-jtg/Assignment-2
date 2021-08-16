@@ -1,16 +1,26 @@
 .footer {
   background: linear-gradient(90deg, $dark-orange 0%, $light-orange 100%);
-  &__logo {
+  &__img {
     max-width: 7.7rem;
     margin-bottom: 1rem;
     @include for-media($tablet) {
       max-width: 10.2rem;
-      margin: 0 auto 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__logo {
+    width: 100%;
+    max-height: 2.8rem;
+    @include for-media($tablet) {
+      max-height: 3.7rem;
     }
   }
   &__social {
     @include for-media($tablet) {
       margin-bottom: 1rem;
+    }
+    @include for-media($tablet) {
+      margin-bottom: 0.5rem;
     }
   }
   &__icon {
@@ -40,19 +50,6 @@
       padding: 5rem 0 1rem;
     }
   }
-  &__links {
-    display: flex;
-    @include for-media($tablet) {
-      margin: 0 0 0 10rem;
-      min-width: 25rem;
-    }
-    @include for-media($laptop) {
-      margin-left: 25rem;
-    }
-    @include for-media($desktop) {
-      margin-left: 52rem;
-    }
-  }
   &__copyright {
     @include font-styles(
       $font-size: 0.9rem,
@@ -70,32 +67,38 @@
     }
   }
 }
-.copyright-tab {
+.copyright-lg {
   margin-bottom: 2.5rem;
+  word-spacing: 0;
   display: none;
   @include for-media($tablet) {
     display: inline-block;
     max-width: 50rem;
   }
 }
-.copyright-phone {
+.copyright-sm {
   margin-left: 2rem;
+  word-spacing: 0;
   padding-bottom: 2.5rem;
   @include for-media($tablet) {
     display: none;
   }
 }
-.links__col-item {
+.link {
   margin-bottom: 1.8rem;
+  font-weight: 900;
   &:last-child {
     @include for-media($tablet) {
       margin: 0;
     }
   }
   @include for-media($tablet) {
-    padding-left: 4rem;
+    padding-left: 2rem;
   }
-  @include for-media($tablet) {
-    padding-left: 9rem;
+  @include for-media($laptop) {
+    padding-left: 6.5rem;
+  }
+  @include for-media($desktop) {
+    padding-left: 11.5rem;
   }
 }

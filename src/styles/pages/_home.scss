@@ -376,9 +376,7 @@
   }
 }
 .consultation {
-  background-image: url("images/consultation-bg.png");
-  background-position: center;
-  background-size: cover;
+  background: url("images/consultation-bg.png") center/cover;
   &__content {
     padding: 4.3rem 0 4.3rem 2rem; 
     @include for-media($tablet) {

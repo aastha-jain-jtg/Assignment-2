@@ -104,8 +104,8 @@
   &__column {
     &:last-child {
       box-sizing: border-box;
-      @include for-media($tablet){
-      padding-left: 0.6rem;
+      @include for-media($tablet) {
+        padding-left: 0.6rem;
       }
       @include for-media($desktop) {
         padding-left: 1rem;
@@ -162,10 +162,11 @@
     }
   }
   @include for-media($tablet) {
-    padding: 5rem 0 0;
+    padding: 5rem 0 0.5rem;
     background-size: 100% 50%, 100% 50%;
   }
   @include for-media($laptop) {
+    padding-bottom: 0;
     background-size: 100% 55%, 100% 45%;
   }
   @include for-media($desktop) {
@@ -196,7 +197,7 @@
       margin-bottom: 0.5rem;
     }
   }
-  &__header {
+  &__title {
     margin-bottom: 2.5rem;
     @include for-media($laptop) {
       margin-top: 6.5rem;
@@ -207,7 +208,7 @@
       min-width: 30%;
     }
   }
-  &__title {
+  &__heading {
     max-width: 24rem;
     margin-bottom: 1rem;
     @include for-media($tablet) {
@@ -276,6 +277,101 @@
     @include for-media($desktop) {
       margin-bottom: 3.8rem;
       max-width: 37rem;
+    }
+  }
+}
+.solutions {
+  &__title {
+    margin: 5rem auto 2.8rem;
+    @include for-media($tablet) {
+      margin: 7rem 0 0;
+    }
+    @include for-media($laptop) {
+      margin: 6rem 0;
+    }
+    @include for-media($desktop) {
+      margin: 7rem 0;
+    }
+  }
+  &__content {
+    padding: 0 2rem;
+    @include for-media($tablet) {
+      padding: 0;
+      display: flex;
+    }
+    @include for-media($laptop) {
+      max-width: 100%;
+    }
+  }
+  &__heading {
+    margin-bottom: 1rem;
+    max-width: 27rem;
+    @include for-media($tablet) {
+      margin-bottom: 4rem;
+    }
+    @include for-media($laptop) {
+      max-width: 30rem;
+      margin-bottom: 1.5rem;
+    }
+    @include for-media($desktop) {
+      max-width: 40rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &__para {
+    margin-bottom: 2rem;
+    @include for-media($tablet) {
+      margin-bottom: 3rem;
+    }
+    @include for-media($laptop) {
+      margin-bottom: 4rem;
+    }
+    @include for-media($desktop) {
+      max-width: 37rem;
+    }
+  }
+  &__icon {
+    display: none;
+    @include for-media($desktop) {
+      display: inline-block;
+      margin: 0 2rem 5rem 1rem;
+      height: 4.5rem;
+      width: 0.5rem;
+      border: 1px solid $dark-orange;
+      float: left;
+      transform: rotate(20deg);
+    }
+  }
+  &__cards {
+    margin: 0 auto 3.5rem;
+    :first-child {
+      @include for-media($tablet) {
+        margin-right: 0.8rem;
+      }
+      @include for-media($laptop) {
+        margin-right: 1.2rem;
+      }
+      @include for-media($desktop) {
+        margin-right: 1.5rem;
+      }
+    }
+    @include for-media($tablet) {
+      display: flex;
+      margin: 5rem auto 2.5rem;
+    }
+    @include for-media($laptop) {
+      margin: 6rem auto 2.5rem;
+    }
+    @include for-media($desktop) {
+      margin: 6rem 0 3.2rem 0.5rem;
+    }
+  }
+  &__btn {
+    & > span {
+      margin-left: 2rem;
+    }
+    @include for-media($desktop) {
+      margin-left: 4rem;
     }
   }
 }

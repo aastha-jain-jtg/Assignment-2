@@ -1,18 +1,18 @@
 .footer {
   background: linear-gradient(90deg, $dark-orange 0%, $light-orange 100%);
-  &__img {
+  &__logo {
     max-width: 7.7rem;
     margin-bottom: 1rem;
     @include for-media($tablet) {
       max-width: 10.2rem;
       margin-bottom: 1.5rem;
     }
-  }
-  &__logo {
-    width: 100%;
-    max-height: 2.8rem;
-    @include for-media($tablet) {
-      max-height: 3.7rem;
+    & > img {
+      width: 100%;
+      max-height: 2.8rem;
+      @include for-media($tablet) {
+        max-height: 3.7rem;
+      }
     }
   }
   &__social {
@@ -21,19 +21,6 @@
     }
     @include for-media($tablet) {
       margin-bottom: 0.5rem;
-    }
-  }
-  &__icon {
-    color: $white;
-    font-size: 2.8rem;
-    display: inline-block;
-    margin: 0 0.8rem 2rem 0;
-    @include for-media($tablet) {
-      font-size: 2.7rem;
-    }
-    @include for-media($laptop) {
-      font-size: 3rem;
-      margin-right: 1rem;
     }
   }
   &__content {
@@ -100,5 +87,18 @@
   }
   @include for-media($desktop) {
     padding-left: 11.5rem;
+  }
+}
+.social-icon {
+  color: $white;
+  font-size: 2.8rem;
+  display: inline-block;
+  margin: 0 0.8rem 2rem 0;
+  @include for-media($tablet) {
+    font-size: 2.7rem;
+  }
+  @include for-media($laptop) {
+    font-size: 3rem;
+    margin-right: 1rem;
   }
 }

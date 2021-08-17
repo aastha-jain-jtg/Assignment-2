@@ -1,0 +1,104 @@
+.footer {
+  background: linear-gradient(90deg, $dark-orange 0%, $light-orange 100%);
+  &__logo {
+    max-width: 7.7rem;
+    margin-bottom: 1rem;
+    @include for-media($tablet) {
+      max-width: 10.2rem;
+      margin-bottom: 1.5rem;
+    }
+    & > img {
+      width: 100%;
+      max-height: 2.8rem;
+      @include for-media($tablet) {
+        max-height: 3.7rem;
+      }
+    }
+  }
+  &__social {
+    @include for-media($tablet) {
+      margin-bottom: 1rem;
+    }
+    @include for-media($tablet) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__content {
+    @include flexbox($flex-direction: column);
+    padding: 2.5rem 2rem 0;
+    @include for-media($tablet) {
+      padding: 3rem 0 0.5rem;
+      @include flexbox($flex-direction: row);
+    }
+    @include for-media($laptop) {
+      padding-bottom: 0;
+    }
+    @include for-media($desktop) {
+      padding: 5rem 0 1rem;
+    }
+  }
+  &__copyright {
+    @include font-styles(
+      $font-size: 0.9rem,
+      $font-weight: $regular,
+      $line-height: 1.3rem
+    );
+    @include for-media($tablet) {
+      max-width: 70.8rem;
+      margin: 0 auto;
+      @include font-styles(
+        $font-size: 1.1rem,
+        $font-weight: $regular,
+        $line-height: 1.3rem
+      );
+    }
+  }
+}
+.copyright-lg {
+  margin-bottom: 2.5rem;
+  word-spacing: 0;
+  display: none;
+  @include for-media($tablet) {
+    display: inline-block;
+    max-width: 50rem;
+  }
+}
+.copyright-sm {
+  margin-left: 2rem;
+  word-spacing: 0;
+  padding-bottom: 2.5rem;
+  @include for-media($tablet) {
+    display: none;
+  }
+}
+.link {
+  margin-bottom: 1.8rem;
+  font-weight: 900;
+  &:last-child {
+    @include for-media($tablet) {
+      margin: 0;
+    }
+  }
+  @include for-media($tablet) {
+    padding-left: 2rem;
+  }
+  @include for-media($laptop) {
+    padding-left: 6.5rem;
+  }
+  @include for-media($desktop) {
+    padding-left: 11.5rem;
+  }
+}
+.social-icon {
+  color: $white;
+  font-size: 2.8rem;
+  display: inline-block;
+  margin: 0 0.8rem 2rem 0;
+  @include for-media($tablet) {
+    font-size: 2.7rem;
+  }
+  @include for-media($laptop) {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+}

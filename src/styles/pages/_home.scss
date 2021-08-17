@@ -383,7 +383,7 @@
       padding:4.5rem 0;
     }
     @include for-media($laptop) {
-      padding: 5.5rem 0;
+      padding: 5.5rem 0 4.5rem;
     }
     @include for-media($desktop) {
       padding: 6rem 0;
